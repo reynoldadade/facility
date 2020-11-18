@@ -25,14 +25,14 @@ const LinkTemplate = [
 
 const layout = ({ children }) => {
   return (
-    <div className="grid grid-cols-3 gap-4">
-      <div className="col-span-3 p-2 bg-gray-200  flex justify-between">
+    <div className="grid grid-cols-1 gap-4">
+      <div className="col-span-1 p-2 bg-gray-200  flex justify-between">
         <div className="font-semibold">Managed</div>
         <div className="flex px-2 text-sm">
           <LinkedList LinkTemplate={LinkTemplate} />
         </div>
       </div>
-      <div>{children}</div>
+      <div className="col-span-1">{children}</div>
     </div>
   );
 };

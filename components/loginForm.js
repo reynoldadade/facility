@@ -1,6 +1,11 @@
+import Link from 'next/link';
+
 const loginForm = (props) => (
-  <div className="m-2 shadow p-2">
-    <p className="text-gray-700 font-bold">Welcome </p>
+  <div>
+    <div className="flex flex-col">
+      <p className="text-blue-500 ">Welcome to </p>
+      <p className="text-blue-700 text-4xl font-bold">Managed</p>
+    </div>
     <form className="flex flex-col pt-3 md:pt-8">
       <div className="flex flex-col pt-4">
         <input
@@ -19,11 +24,17 @@ const loginForm = (props) => (
       <button
         id="loginButton"
         type="submit"
-        className="bg-blue-500 text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8 disabled:opacity-75 disabled:cursor-not-allowed">
+        className="bg-blue-700 text-white font-bold text-lg hover:bg-blue-500 p-2 mt-8 disabled:opacity-75 disabled:cursor-not-allowed">
         Log In
         <i class="fas fa-circle-notch fa-spin" v-show="loading"></i>
       </button>
     </form>
+    <div className="pt-4  text-blue-500  font-semibold text-sm text-center">
+      Forgotten Password?{' '}
+      <span className="underline">
+        <Link href="">Click here</Link>
+      </span>
+    </div>
   </div>
 );
 
